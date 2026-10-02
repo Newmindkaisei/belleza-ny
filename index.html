@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Impulsa tu Negocio de Belleza | Nueva York</title>
+<meta name="description" content="Asociación para ayudar a negocios de belleza en Nueva York con tecnología, visibilidad y orientación sobre oportunidades de financiamiento.">
+<meta name="theme-color" content="#080608">
+<meta property="og:title" content="Impulsa tu Negocio de Belleza en Nueva York">
+<meta property="og:description" content="Tecnología, visibilidad y orientación financiera para salones, barberías, spas y estudios de belleza en Nueva York.">
+<meta property="og:type" content="website">
+<style>
+:root{
+  --black:#080608;--ink:#0f0b10;--gold:#d9a63a;--gold2:#f6d98b;--pink:#e50070;--pink2:#ff3f9a;
+  --cream:#fff3d7;--text:#f8f4ed;--muted:#cfc7c8;--dim:#a99fa2;--line:rgba(246,217,139,.22);
+  --serif:"Didot","Bodoni 72","Playfair Display",Georgia,"Times New Roman",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--black);color:var(--text);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+img,svg{display:block;max-width:100%}
+:focus-visible{outline:3px solid var(--pink2);outline-offset:3px;border-radius:6px}
+.container{width:min(1160px,92%);margin:auto}
+.skip{position:absolute;left:-999px;top:8px;background:var(--gold2);color:#120c08;padding:10px 14px;border-radius:8px;font-weight:700;z-index:100}
+.skip:focus{left:8px}
+
+/* Nav */
+.nav{position:sticky;top:0;z-index:50;background:rgba(8,6,8,.78);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(246,217,139,.12)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px;gap:20px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-size:19px;letter-spacing:.5px}
+.brand-mark{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#120c08;font-weight:900;font-family:var(--sans);font-size:14px}
+.nav-links{display:flex;gap:26px;font-size:14px;color:var(--muted)}
+.nav-links a:hover{color:var(--gold2)}
+.nav-cta{background:var(--pink);color:#fff;padding:10px 18px;border-radius:999px;font-weight:800;font-size:13px;letter-spacing:.4px;white-space:nowrap}
+.nav-cta:hover{background:var(--pink2)}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;padding:72px 0 88px;background:
+ radial-gradient(circle at 82% 18%,rgba(229,0,112,.30),transparent 32%),
+ radial-gradient(circle at 10% 85%,rgba(217,166,58,.14),transparent 34%),var(--black)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(246,217,139,.45);color:var(--gold2);padding:8px 14px;border-radius:999px;font-size:11.5px;font-weight:800;letter-spacing:1.6px}
+.badge i{width:7px;height:7px;border-radius:50%;background:var(--pink2);box-shadow:0 0 0 4px rgba(255,63,154,.2)}
+h1{font-family:var(--serif);font-weight:700;font-size:clamp(34px,4.6vw,60px);line-height:1.02;letter-spacing:-.3px;margin:22px 0 24px}
+h1 .gold{background:linear-gradient(120deg,var(--gold2),var(--gold) 60%,var(--gold2));-webkit-background-clip:text;background-clip:text;color:transparent}
+h1 .h1-sub{display:block;margin-top:16px;font-size:.42em;line-height:1.35;letter-spacing:.4px;color:#f3e6c8}
+.lead{font-size:19px;line-height:1.6;color:#ddd6d7;max-width:600px;margin:0}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:30px}
+.cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#120c08;font-weight:900;letter-spacing:.3px;padding:17px 26px;border-radius:999px;box-shadow:0 10px 34px rgba(217,166,58,.22);transition:transform .15s,box-shadow .15s}
+.cta:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(217,166,58,.32)}
+.ghost{display:inline-flex;align-items:center;padding:16px 22px;border-radius:999px;border:1px solid rgba(248,244,237,.25);color:var(--text);font-weight:700}
+.ghost:hover{border-color:var(--gold2);color:var(--gold2)}
+.for-who-box{margin-top:36px;max-width:600px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(180deg,rgba(26,20,26,.85),rgba(15,11,16,.85));padding:20px 22px 22px}
+.for-who-title{display:flex;align-items:center;gap:10px;margin:0 0 14px;color:var(--gold2);font-size:11.5px;font-weight:800;letter-spacing:1.6px}
+.for-who-title::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(246,217,139,.4),transparent)}
+.for-who{display:grid;grid-template-columns:1fr 1fr;gap:10px 24px;margin:0;padding:0;list-style:none}
+.for-who li{display:flex;align-items:center;gap:10px;font-size:14.5px;color:#e6dfe0;line-height:1.3}
+.for-who li::before{content:"";flex:none;width:18px;height:18px;border-radius:50%;background:rgba(246,217,139,.12) url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27%3E%3Cpath d=%27M4 8.5l2.5 2.5L12 5.5%27 stroke=%27%23f6d98b%27 stroke-width=%272%27 fill=%27none%27 stroke-linecap=%27round%27/%3E%3C/svg%3E") center/12px no-repeat;border:1px solid rgba(246,217,139,.35)}
+
+/* Flyer */
+.flyer{position:relative;margin:0;display:flex;flex-direction:column;align-items:center}
+.flyer::before{content:"";position:absolute;inset:6% 0;background:radial-gradient(circle,rgba(229,0,112,.35),transparent 65%);filter:blur(34px)}
+.flyer-wrap{position:relative;display:block;width:min(460px,100%);border-radius:24px;overflow:hidden;border:1px solid rgba(246,217,139,.45);box-shadow:0 30px 90px rgba(0,0,0,.7);transform:rotate(1.5deg);transition:transform .3s}
+.flyer-wrap:hover{transform:rotate(0) scale(1.01)}
+.flyer-wrap img{width:100%;height:auto}
+.flyer figcaption{position:relative;margin-top:18px;font-family:var(--serif);font-style:italic;color:var(--gold2);font-size:18px;text-align:center}
+
+/* Sections */
+section{padding:96px 0}
+.eyebrow{display:block;color:var(--pink2);font-size:12px;font-weight:800;letter-spacing:2px;margin-bottom:12px}
+.section-title{text-align:center;max-width:780px;margin:0 auto 48px}
+.section-title h2,.h2{font-family:var(--serif);font-size:clamp(32px,4vw,46px);line-height:1.08;margin:0 0 14px}
+.section-title p{color:var(--muted);line-height:1.65;font-size:17px;margin:0}
+.section-cta{margin:0 0 44px}
+.section-cta .cta{font-size:21px;padding:24px 44px;gap:12px}
+@media(max-width:520px){.section-cta .cta{font-size:17px;padding:20px 24px;width:100%}}
+
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{position:relative;background:linear-gradient(180deg,#1a141a,var(--ink));border:1px solid var(--line);border-radius:24px;padding:32px;transition:border-color .2s,transform .2s}
+.card:hover{border-color:rgba(246,217,139,.5);transform:translateY(-3px)}
+.icon{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:rgba(246,217,139,.1);border:1px solid rgba(246,217,139,.3);color:var(--gold2);margin-bottom:22px}
+.card .tag{position:absolute;top:30px;right:30px;font-family:var(--serif);font-size:44px;color:rgba(246,217,139,.12);line-height:1}
+.card h3{font-family:var(--serif);font-size:26px;margin:0 0 10px;color:var(--gold2)}
+.card p{color:#d9d2d4;line-height:1.6;margin:0 0 18px}
+.card ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.card li{color:#d9d2d4;padding-left:26px;position:relative;font-size:15px}
+.card li::before{content:"";position:absolute;left:0;top:4px;width:15px;height:15px;border-radius:50%;background:var(--pink) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.5l2.5 2.5L12 5.5' stroke='white' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") center/11px no-repeat}
+
+/* Publish */
+.publish-sec{background:linear-gradient(180deg,var(--black),#120a10)}
+.publish{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:stretch}
+.publish-box{background:linear-gradient(135deg,#e50070,#9f004e);border-radius:28px;padding:42px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+.publish-box::after{content:"";position:absolute;right:-60px;bottom:-60px;width:220px;height:220px;border-radius:50%;border:40px solid rgba(255,255,255,.08)}
+.publish-box .eyebrow{color:#ffd1e6}
+.publish-box p{font-size:18px;line-height:1.6;margin:0;color:#ffe6f1;max-width:420px}
+.publish-list{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.publish-list div{padding:22px;border:1px solid var(--line);border-radius:18px;background:#120d12}
+.publish-list strong{display:flex;align-items:center;gap:10px;color:var(--gold2);font-size:14px;letter-spacing:.8px;margin-bottom:8px}
+.publish-list span{color:#d9d2d4;line-height:1.55;font-size:15px}
+
+/* Money */
+.money{background:linear-gradient(180deg,#120a10,#180d15)}
+.money-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.money-item{background:var(--cream);color:#40230e;border-radius:20px;padding:26px 18px;text-align:left;transition:transform .2s}
+.money-item:hover{transform:translateY(-3px)}
+.money-item .mi{width:42px;height:42px;border-radius:12px;background:#40230e;color:var(--gold2);display:grid;place-items:center;margin-bottom:16px}
+.money-item strong{display:block;font-size:15px;letter-spacing:.3px;margin-bottom:8px}
+.money-item span{font-size:13.5px;line-height:1.5;display:block;color:#6a4a2e}
+.note{max-width:780px;margin:28px auto 0;text-align:center;color:var(--dim);font-size:13px;line-height:1.6}
+
+/* Steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:s}
+.step{padding:30px;border-radius:22px;border:1px dashed rgba(246,217,139,.3);position:relative}
+.step::before{counter-increment:s;content:counter(s);width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--gold2);color:#17100b;font-weight:900;margin-bottom:18px}
+.step h3{font-family:var(--serif);font-size:23px;margin:0 0 8px}
+.step p{color:var(--muted);line-height:1.6;margin:0}
+
+/* Form */
+.form-section{background:linear-gradient(135deg,#120b10,#24101b)}
+.form-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:start}
+.form-copy p{color:var(--muted);line-height:1.65;font-size:17px}
+.perks{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:14px}
+.perks li{display:flex;gap:12px;align-items:flex-start;color:#e6dfe0;line-height:1.5}
+.perks svg{flex:none;color:var(--gold2);margin-top:2px}
+.form-wrap{background:#0b080b;border:1px solid rgba(246,217,139,.3);border-radius:28px;padding:36px;box-shadow:0 30px 80px rgba(0,0,0,.4)}
+form{display:grid;gap:18px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:block;font-size:14px;font-weight:700;color:#eee}
+label .req{color:var(--pink2)}
+input,select{width:100%;margin-top:8px;background:#171217;color:#fff;border:1px solid #4b3a44;border-radius:12px;padding:15px;font-size:16px;font-family:inherit;outline:none;transition:border-color .15s,box-shadow .15s}
+select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 6l4 4 4-4' stroke='%23f6d98b' stroke-width='2' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:16px;padding-right:40px}
+input::placeholder{color:#7d6f76}
+input:focus,select:focus{border-color:var(--pink2);box-shadow:0 0 0 3px rgba(255,63,154,.18)}
+input:user-invalid{border-color:#ff6b6b}
+.submit{border:0;cursor:pointer;font-size:16px;width:100%;font-family:inherit}
+.small{font-size:12px;color:var(--dim);line-height:1.55;margin:0}
+.check{display:flex;align-items:flex-start;gap:12px;padding:14px 16px;border:1px solid #4b3a44;border-radius:12px;background:#171217;cursor:pointer;font-weight:600;line-height:1.4}
+.check:has(input:checked){border-color:var(--gold2);background:rgba(246,217,139,.06)}
+.check input{width:20px;height:20px;margin:0;flex:none;accent-color:var(--gold);cursor:pointer}
+.check small{display:block;font-weight:400;color:var(--dim);font-size:12.5px;margin-top:2px}
+[hidden]{display:none!important}
+.success{display:none;background:linear-gradient(135deg,rgba(246,217,139,.10),rgba(229,0,112,.08));color:#e6dfe0;border:1px solid rgba(246,217,139,.55);padding:18px 20px;border-radius:14px;line-height:1.55}
+.success strong{display:block;font-family:var(--serif);font-size:22px;color:var(--gold2);margin-bottom:4px}
+.success.show{display:block}
+.form-error{display:none;background:rgba(229,0,112,.08);color:#ffd1e6;border:1px solid rgba(255,63,154,.55);padding:15px 18px;border-radius:14px;line-height:1.5}
+.form-error.show{display:block}
+.submit:disabled{opacity:.7;cursor:wait;transform:none}
+.gform-frame{position:absolute;width:0;height:0;border:0;visibility:hidden}
+
+/* FAQ */
+.faq{max-width:820px;margin:auto;display:grid;gap:12px}
+details{background:#120d12;border:1px solid var(--line);border-radius:16px;padding:0 22px}
+summary{cursor:pointer;list-style:none;padding:20px 30px 20px 0;font-weight:700;position:relative;line-height:1.4}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:0;top:16px;font-size:24px;color:var(--gold2);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin:0 0 20px;color:var(--muted);line-height:1.65}
+
+footer{padding:40px 0;color:var(--dim);border-top:1px solid #211a20;font-size:13px}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}
+ .cta,.card,.money-item{transition:none}
+}
+
+@media(max-width:1000px){
+ .money-grid{grid-template-columns:repeat(3,1fr)}
+ .nav-links{display:none}
+}
+@media(max-width:850px){
+ .hero{padding:44px 0 64px}
+ .hero-grid,.publish,.form-grid{grid-template-columns:1fr}
+ .hero-grid{gap:48px}
+ .cards,.steps{grid-template-columns:1fr}
+ .money-grid{grid-template-columns:1fr 1fr}
+ section{padding:68px 0}
+}
+@media(max-width:520px){
+ .brand span:not(.brand-mark){display:none}
+ .lead{font-size:16.5px}
+ .for-who-box{padding:18px 16px}.for-who{gap:10px 14px}.for-who li{font-size:13.5px;align-items:flex-start}.for-who li::before{margin-top:-1px}
+ .publish-list,.row{grid-template-columns:1fr}
+ .money-grid{grid-template-columns:1fr}
+ .form-wrap,.publish-box{padding:24px}
+ .card{padding:26px}
+ .hero-actions .cta,.hero-actions .ghost{width:100%;justify-content:center}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+
+<nav class="nav" aria-label="Principal">
+ <div class="container nav-inner">
+  <a class="brand" href="#"><span class="brand-mark" aria-hidden="true">NY</span><span>Belleza NY</span></a>
+  <div class="nav-links">
+   <a href="#ecosistema">Ecosistema</a>
+   <a href="#financiamiento">Financiamiento</a>
+   <a href="#como-funciona">Cómo funciona</a>
+   <a href="#preguntas">Preguntas</a>
+  </div>
+  <a class="nav-cta" href="#registro">Únete gratis</a>
+ </div>
+</nav>
+
+<main id="main">
+<header class="hero">
+ <div class="container hero-grid">
+  <div>
+   <span class="badge"><i aria-hidden="true"></i>PRELANZAMIENTO • NEGOCIOS DE BELLEZA EN NUEVA YORK</span>
+   <h1>CRECE TU NEGOCIO DE <span class="gold">BELLEZA</span> EN NUEVA YORK: <span class="h1-sub">MÁS CLIENTES, MÁS VISIBILIDAD, CRÉDITO PARA TU NEGOCIO, MEJOR CRÉDITO PERSONAL Y MÁS OPORTUNIDADES PARA CONSEGUIR CAPITAL LOCAL, ESTATAL Y FEDERAL.</span></h1>
+   <p class="lead">Una asociación que reúne tecnología, visibilidad y orientación financiera para que tu negocio de belleza o cuidado personal pueda crecer, organizarse y descubrir oportunidades de financiamiento y asistencia en Estados Unidos.</p>
+   <div class="hero-actions">
+    <a class="cta" href="#registro">Únete a la lista de prelanzamiento <span aria-hidden="true">→</span></a>
+    <a class="ghost" href="#ecosistema">Ver qué incluye</a>
+   </div>
+   <div class="for-who-box">
+    <p class="for-who-title" id="for-who-title">PARA TODOS LOS NEGOCIOS DE BELLEZA Y CUIDADO PERSONAL</p>
+    <ul class="for-who" aria-labelledby="for-who-title">
+    <li>Barbería</li><li>Depilación</li><li>Salón de Uñas</li><li>Spa y Bienestar</li><li>Centros de Belleza</li><li>Micropigmentación</li><li>Educación y Eventos</li><li>Spa Médico y Estética</li><li>Proveedores y Servicios</li><li>Maquillaje y Maquillistas</li><li>Salón de Pestañas y Cejas</li><li>Dermatología y Clínicas de la Piel</li>
+   </ul>
+   </div>
+  </div>
+
+  <figure class="flyer">
+   <a href="flyer.jpg?v=2" target="_blank" rel="noopener" class="flyer-wrap"><img src="flyer.jpg?v=2" width="992" height="1586" alt="Flyer: Impulsa tu negocio de belleza en Nueva York. WebApp, Directorio y Estrategias de estabilidad financiera para negocios de belleza en todo Nueva York." fetchpriority="high"></a>
+   <figcaption>Juntos hacemos crecer la belleza en Nueva York</figcaption>
+  </figure>
+ </div>
+</header>
+
+<section id="ecosistema">
+ <div class="container">
+  <div class="section-title reveal">
+   <div class="section-cta"><a class="cta" href="#registro">Únete a la lista de prelanzamiento <span aria-hidden="true">→</span></a></div>
+   <span class="eyebrow">TODO EN UN SOLO ECOSISTEMA</span>
+   <h2>Tres Pilares Para Administrar, Promocionar y Financiar Tu Negocio De Belleza</h2>
+   <p>Herramientas, presencia digital y orientación financiera conectadas en un mismo lugar.</p>
+  </div>
+  <div class="cards">
+   <article class="card reveal">
+    <span class="tag" aria-hidden="true">01</span>
+    <div class="icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+    <h3>WebApp</h3>
+    <p>Herramientas para administrar tu negocio desde tu teléfono o computadora.</p>
+    <ul><li>Citas y clientes</li><li>Finanzas e inventario</li><li>Reportes y crecimiento</li><li>Contenido y asistente IA</li></ul>
+   </article>
+   <article class="card reveal">
+    <span class="tag" aria-hidden="true">02</span>
+    <div class="icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div>
+    <h3>Directorio</h3>
+    <p>Una presencia digital diseñada para que los clientes puedan descubrir tu negocio.</p>
+    <ul><li>Perfil profesional</li><li>Servicios y ubicación</li><li>Fotos y reseñas</li><li>Promociones y citas</li></ul>
+   </article>
+   <article class="card reveal">
+    <span class="tag" aria-hidden="true">03</span>
+    <div class="icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 10l9-6 9 6M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 21h18"/></svg></div>
+    <h3>Estabilidad financiera</h3>
+    <p>Orientación para identificar oportunidades y programas que puedan aplicar a tu negocio.</p>
+    <ul><li>Crédito para el negocio</li><li>Crédito personal</li><li>Grants / subvenciones</li><li>Programas de asistencia</li></ul>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section class="publish-sec">
+ <div class="container publish">
+  <div class="publish-box reveal">
+   <span class="eyebrow">CONTENIDO</span>
+   <h2 class="h2">Publica desde tu teléfono.</h2>
+   <p>Comparte tu trabajo con tus clientes y aumenta tu presencia digital sin complicaciones.</p>
+  </div>
+  <div class="publish-list">
+   <div class="reveal"><strong><span aria-hidden="true">📸</span> FOTOS</strong><span>Publica imágenes de tus servicios, trabajos y productos.</span></div>
+   <div class="reveal"><strong><span aria-hidden="true">🎥</span> VIDEOS</strong><span>Comparte videos y contenido visual directamente desde tu teléfono.</span></div>
+   <div class="reveal"><strong><span aria-hidden="true">📝</span> ARTÍCULOS</strong><span>Crea consejos, promociones y contenido educativo para tus clientes.</span></div>
+   <div class="reveal"><strong><span aria-hidden="true">📱</span> DIRECTORIO + REDES</strong><span>Prepara contenido para el directorio y tus redes sociales en un solo flujo.</span></div>
+  </div>
+ </div>
+</section>
+
+<section id="financiamiento" class="money">
+ <div class="container">
+  <div class="section-title reveal">
+   <span class="eyebrow">INCLUIDO EN LA ASOCIACIÓN</span>
+   <h2>Orientación para descubrir oportunidades financieras</h2>
+   <p>Te ayudamos a explorar recursos relacionados con financiamiento, crédito y programas de apoyo que podrían aplicar a tu negocio.</p>
+  </div>
+  <div class="money-grid">
+   <div class="money-item reveal"><div class="mi" aria-hidden="true">💰</div><strong>Crédito para el negocio</strong><span>Opciones de crédito y financiamiento empresarial.</span></div>
+   <div class="money-item reveal"><div class="mi" aria-hidden="true">📈</div><strong>Crédito personal</strong><span>Estrategias para fortalecer tu perfil crediticio personal.</span></div>
+   <div class="money-item reveal"><div class="mi" aria-hidden="true">📄</div><strong>Grants / subvenciones</strong><span>Identificación de programas y oportunidades.</span></div>
+   <div class="money-item reveal"><div class="mi" aria-hidden="true">👥</div><strong>Ayuda para minorías</strong><span>Recursos y programas para grupos elegibles.</span></div>
+   <div class="money-item reveal"><div class="mi" aria-hidden="true">🏛️</div><strong>Programas de asistencia</strong><span>Programas públicos, privados y comunitarios.</span></div>
+  </div>
+  <p class="note">La asociación ofrece orientación para explorar oportunidades. La elegibilidad y aprobación de cualquier crédito, grant o programa depende de cada entidad y de los requisitos de tu negocio.</p>
+ </div>
+</section>
+
+<section id="como-funciona">
+ <div class="container">
+  <div class="section-title reveal">
+   <span class="eyebrow">CÓMO FUNCIONA</span>
+   <h2>Tres pasos para empezar</h2>
+  </div>
+  <div class="steps">
+   <div class="step reveal"><h3>Regístrate</h3><p>Déjanos los datos de tu negocio en la lista de prelanzamiento. Toma menos de un minuto.</p></div>
+   <div class="step reveal"><h3>Te contactamos</h3><p>Te enviaremos información sobre el lanzamiento y los próximos pasos por WhatsApp y Correo Electrónico.</p></div>
+   <div class="step reveal"><h3>Haz crecer tu negocio</h3><p>Accede al ecosistema en un solo lugar: tu centro de control para tu negocio, directorio local para conseguir clientes, ayuda con crédito personal y crédito corporativo con tu Tax ID, y mucho más.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="registro" class="form-section">
+ <div class="container form-grid">
+  <div class="form-copy reveal">
+   <span class="eyebrow">PRELANZAMIENTO</span>
+   <h2 class="h2">Únete a la lista de prelanzamiento</h2>
+   <p>Déjanos tus datos para recibir información sobre el lanzamiento y las oportunidades disponibles para negocios de belleza en Nueva York.</p>
+   <ul class="perks">
+    <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Sé de los primeros en conocer la fecha de lanzamiento.</li>
+    <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Recibe información sobre el directorio y la WebApp.</li>
+    <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Conoce las oportunidades de orientación financiera.</li>
+   </ul>
+  </div>
+  <div class="form-wrap reveal">
+   <form id="leadForm" novalidate>
+    <div><label for="business_name">Nombre del negocio <span class="req" aria-hidden="true">*</span></label><input id="business_name" name="business_name" required autocomplete="organization" placeholder="Ej. Mi Salón de Belleza"></div>
+    <div><label for="business_type">Tipo de negocio</label>
+     <select id="business_type" name="business_type">
+      <option value="">Selecciona una opción</option>
+      <option>Barbería</option>
+      <option>Depilación</option>
+      <option>Salón de Uñas</option>
+      <option>Spa y Bienestar</option>
+      <option>Centros de Belleza</option>
+      <option>Micropigmentación</option>
+      <option>Educación y Eventos</option>
+      <option>Spa Médico y Estética</option>
+      <option>Proveedores y Servicios</option>
+      <option>Maquillaje y Maquillistas</option>
+      <option>Salón de Pestañas y Cejas</option>
+      <option>Dermatología y Clínicas de la Piel</option>
+     </select></div>
+    <label class="check" for="home_based"><input type="checkbox" id="home_based" name="home_based" value="si"><span>Mi negocio opera desde mi casa <small>(no necesitas escribir la dirección)</small></span></label>
+    <div id="addressField"><label for="address">Dirección del negocio <span class="req" aria-hidden="true">*</span></label><input id="address" name="address" required autocomplete="street-address" placeholder="Dirección, Ciudad, NY"></div>
+    <div class="row">
+     <div><label for="whatsapp">WhatsApp <span class="req" aria-hidden="true">*</span></label><input id="whatsapp" name="whatsapp" required type="tel" autocomplete="tel" inputmode="tel" placeholder="+1 (___) ___-____"></div>
+     <div><label for="email">Email <span class="req" aria-hidden="true">*</span></label><input id="email" name="email" required type="email" autocomplete="email" placeholder="correo@negocio.com" pattern="[^@\s]+@[^@\s]+\.[^@\s]+"></div>
+    </div>
+    <button class="cta submit" type="submit">Quiero información del lanzamiento <span aria-hidden="true">→</span></button>
+    <div id="success" class="success" role="status" aria-live="polite"><strong>¡Registro recibido!</strong>Gracias por tu interés. Hemos recibido la información de tu negocio y te contactaremos con información sobre el lanzamiento.</div>
+    <div id="formError" class="form-error" role="alert"></div>
+    <p class="small">Los campos con * son obligatorios. Al enviar este formulario estás solicitando información sobre el lanzamiento. No implica aprobación de crédito, grants o financiamiento.</p>
+   </form>
+  </div>
+ </div>
+</section>
+
+<section id="preguntas">
+ <div class="container">
+  <div class="section-title reveal">
+   <span class="eyebrow">PREGUNTAS FRECUENTES</span>
+   <h2>Lo que necesitas saber</h2>
+  </div>
+  <div class="faq">
+   <details class="reveal"><summary>¿Por qué creamos esta asociación?</summary><p>Muchas asociaciones son solo promesas y palabras. Nosotros te ayudamos con todo lo que tu negocio necesita: desde tu crédito personal, el crédito de tu negocio con tu Tax ID, búsqueda de grants y subvenciones, preparación de tu negocio para que recibas préstamos, un centro de control para tu negocio (WebApp: finanzas, citas, inventario, asistente IA, etc.), un directorio para conseguir clientes, publicar contenido desde tu celular, ¡y mucho más!</p><p><strong style="color:var(--gold2)">¡Ahora podrás hacer lo que te gusta mientras tu equipo (VIRTUAL) HACE TODO LO DEMÁS!</strong></p></details>
+   <details class="reveal"><summary>¿Para quién es la asociación?</summary><p>Para negocios de belleza y cuidado personal en el estado de Nueva York: Barbería, Depilación, Salón de Uñas, Spa y Bienestar, Centros de Belleza, Micropigmentación, Educación y Eventos, Spa Médico y Estética, Proveedores y Servicios, Maquillaje y Maquillistas, Salón de Pestañas y Cejas, Dermatología y Clínicas de la Piel, y servicios similares.</p></details>
+   <details class="reveal"><summary>¿Registrarme garantiza crédito, subvenciones o grants?</summary><p>No. La asociación te da la oportunidad de ser parte de una comunidad que te ayuda a preparar tu negocio para calificar para los programas que descubrimos como parte de los beneficios de tu membresía.</p><p>En otras palabras: descubrimos los programas a los que puedes aplicar, te ayudamos a preparar tu negocio (no lo hacemos por ti) y te apoyamos con la aplicación: nuestro asistente virtual con IA te guía paso a paso, pero no aplica por ti.</p><p>La aprobación depende de cada entidad. Nosotros te ayudamos con los requisitos.</p></details>
+   <details class="reveal"><summary>¿Qué pasa después de registrarme?</summary><p>Te enviaremos información sobre el lanzamiento y los próximos pasos al WhatsApp o email que nos compartas.</p></details>
+   <details class="reveal"><summary>¿Necesito conocimientos de tecnología?</summary><p>No. Las herramientas están pensadas para usarse desde tu teléfono o computadora de forma sencilla.</p></details>
+   <details class="reveal"><summary>¿Cómo me ayuda la asociación a construir mi crédito comercial?</summary><p>Te guiamos paso a paso para establecer y construir el crédito de tu negocio utilizando tu Tax ID (EIN), separándolo de tu crédito personal. Te enseñamos qué cuentas abrir, cómo usarlas responsablemente y cómo monitorear tu progreso para que califiques para mejores financiamientos en el futuro.</p></details>
+   <details class="reveal"><summary>¿Qué incluye el "Centro de Control" (WebApp)?</summary><p>Nuestra WebApp es el cerebro de tu negocio. Es una plataforma integral donde puedes organizar tus finanzas, dar seguimiento a tus aplicaciones de crédito y grants, y acceder a recursos educativos para monitorear el crecimiento de tu negocio. Además, te permite publicar contenido directamente en tus redes sociales (Facebook e Instagram) y publicar tu página en nuestro directorio completamente gratis, ¡todo desde un solo lugar!</p></details>
+   <details class="reveal"><summary>¿Cómo funciona el directorio para conseguir clientes?</summary><p>Al unirte, tu negocio se vuelve parte de nuestro directorio exclusivo. Promovemos activamente a nuestros miembros para que otros miembros de la comunidad y el público en general puedan encontrarte. Es una red diseñada para generar negocios entre todos los asociados.</p></details>
+   <details class="reveal"><summary>¿Ofrecen ayuda para escribir propuestas de grants (subvenciones)?</summary><p>Sí. No solo te ayudamos a encontrar los grants para los que calificas, sino que te proporcionamos las plantillas, guías y la asesoría necesaria para que prepares una solicitud sólida y profesional que destaque ante los comités de selección.</p></details>
+   <!-- PENDIENTE: agregar cuando tengas la respuesta definitiva sobre el costo.
+   <details class="reveal"><summary>¿Tiene algún costo formar parte de la asociación?</summary><p>[RESPUESTA AQUÍ]</p></details>
+   -->
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="container foot">
+  <span>Asociación para negocios de belleza y cuidado personal • Estado de Nueva York</span>
+  <a href="#registro" style="color:var(--gold2);font-weight:700">Únete al prelanzamiento →</a>
+ </div>
+</footer>
+
+<!-- Hidden target for the Google Form POST, so the visitor stays on this page -->
+<iframe name="gform_target" id="gform_target" class="gform-frame" title="Envío del formulario" tabindex="-1" aria-hidden="true"></iframe>
+
+<!-- Google Form settings (response URL + entry IDs) live in this file -->
+<script src="google-form-config.js"></script>
+<script>
+// Lead form: posts to the Google Form configured in google-form-config.js,
+// which stores each response in the linked Google Sheet.
+const form = document.getElementById('leadForm');
+const success = document.getElementById('success');
+const formError = document.getElementById('formError');
+const submitBtn = form.querySelector('.submit');
+const submitLabel = submitBtn.innerHTML;
+const gformFrame = document.getElementById('gform_target');
+
+// Home-based businesses skip the address; WhatsApp and email stay required.
+const homeBased = document.getElementById('home_based');
+const addressField = document.getElementById('addressField');
+const address = document.getElementById('address');
+function syncAddress(){
+  const atHome = homeBased.checked;
+  addressField.hidden = atHome;
+  address.required = !atHome;
+  address.disabled = atHome;
+}
+homeBased.addEventListener('change', syncAddress);
+
+function gformConfigured(){
+  const c = window.GOOGLE_FORM_CONFIG || (typeof GOOGLE_FORM_CONFIG !== 'undefined' ? GOOGLE_FORM_CONFIG : null);
+  if(!c || !/\/formResponse$/.test(c.formActionUrl)) return null;
+  const ids = Object.values(c.fields);
+  if(ids.some(id => !/^entry\.\d+$/.test(id))) return null;
+  return c;
+}
+
+function showError(msg){
+  formError.textContent = msg;
+  formError.classList.add('show');
+}
+
+// Google Forms does not allow reading the response cross-origin, so the
+// values are POSTed through a temporary form into a hidden iframe.
+// When the iframe finishes loading, Google has received the submission.
+function sendToGoogleForm(config, values){
+  return new Promise((resolve, reject) => {
+    const temp = document.createElement('form');
+    temp.action = config.formActionUrl;
+    temp.method = 'POST';
+    temp.target = 'gform_target';
+    temp.hidden = true;
+    for(const [key, entryId] of Object.entries(config.fields)){
+      const input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = entryId;
+      input.value = values[key] || '';
+      temp.appendChild(input);
+    }
+    const timer = setTimeout(() => { cleanup(); reject(new Error('timeout')); }, 15000);
+    function cleanup(){ clearTimeout(timer); gformFrame.removeEventListener('load', onLoad); temp.remove(); }
+    function onLoad(){ cleanup(); resolve(); }
+    gformFrame.addEventListener('load', onLoad);
+    document.body.appendChild(temp);
+    temp.submit();
+  });
+}
+
+form.addEventListener('submit', function(e){
+  e.preventDefault();
+  success.classList.remove('show');
+  formError.classList.remove('show');
+  if(!form.checkValidity()){
+    form.reportValidity();
+    return;
+  }
+
+  const config = gformConfigured();
+  if(!config){
+    console.warn('Google Form no configurado: completa google-form-config.js (ver README.md).');
+    showError('El formulario aún no está conectado. Por favor intenta más tarde.');
+    return;
+  }
+
+  const values = {
+    businessName: form.business_name.value.trim(),
+    businessType: form.business_type.value,
+    address: homeBased.checked ? config.homeBasedAddressText : form.address.value.trim(),
+    whatsapp: form.whatsapp.value.trim(),
+    email: form.email.value.trim()
+  };
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Enviando…';
+  sendToGoogleForm(config, values)
+    .then(() => {
+      success.classList.add('show');
+      form.reset();
+      syncAddress();
+    })
+    .catch(() => {
+      showError('No pudimos enviar tu información. Revisa tu conexión e inténtalo de nuevo.');
+    })
+    .finally(() => {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = submitLabel;
+    });
+});
+
+// Fade sections in as they scroll into view
+const els = document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window){
+  const io = new IntersectionObserver(entries => entries.forEach(en => {
+    if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+  }), {threshold:.12});
+  els.forEach(el => io.observe(el));
+} else {
+  els.forEach(el => el.classList.add('in'));
+}
+</script>
+</body>
+</html>
